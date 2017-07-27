@@ -1,0 +1,51 @@
+<section>
+    <div class="list" ng-controller="listController">
+        <br/>
+        <div class="ng-show" ng-show="showDelMessage" >
+            <div class="alert alert-danger alert-dismissable fade in">
+                <a href="#!/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Success!!!</strong> The record has been deleted successfully.
+            </div>
+        </div>
+            <div class="col-sm-12">
+                <h3>
+                    <span class="glyphicon glyphicon-list"></span> Product List
+                </h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>SKU</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Created at</th>
+                            <th>Updated at</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="x in myProducts">
+                            <td>{{x._id}}</td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.sku}}</td>
+                            <td>{{x.description}}</td>
+                            <td>{{x.price}}</td>
+                            <td>{{x.created_at}}</td>
+                            <td>{{x.updated_at}}</td>
+                            <td>
+                                <a href="#!edit/{{x._id}}" ng-controller="editController">
+                                <button   class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+                                
+                                </a>
+                            
+                                <button ng-click="productDelete(x.id)" class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+
+            </div>
+        </div>
+</section>

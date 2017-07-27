@@ -1,0 +1,27 @@
+<section>
+    <div class="addItem" ng-controller="editController">
+        <br/>
+        <div class="ng-hide" ng-show="showMessage">
+                <div class="alert alert-success alert-dismissable fade in">
+                    <a href="#!/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!!!</strong> The record has been updated successfully.
+                </div>
+            </div>
+        <div class="col-sm-4">
+
+            <form class="form">
+                <h3>Update Item :</h3>
+                <input ng-model="myProduct.name"  type="text" class="form-control" placeholder="Product Name" >
+                <input ng-model="myProduct.sku" type="text" class="form-control" placeholder="SKU">
+                <textarea ng-model="myProduct.description" name="" id="description" rows="4" class="form-control" placeholder="Description"></textarea>
+                <input ng-model="myProduct.price" type="text" id="price" class="form-control" placeholder="Price">
+
+                <button ng-click="sendItem(myProduct._id)" id="add" class="btn btn-success no-margin-left">Update <i class="glyphicon glyphicon-pencil"></i></button>
+                
+                
+            
+            </form>
+        </div>
+    </div>
+
+</section>

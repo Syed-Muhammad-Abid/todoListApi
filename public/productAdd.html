@@ -1,0 +1,45 @@
+<section>
+    <div class="addItem" ng-controller="addController">
+        <br/>
+        <div class="ng-hide" ng-show="showMessage">
+                <div class="alert alert-success alert-dismissable fade in">
+                    <a href="#!/" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!!!</strong> The record has been added successfully.
+                </div>
+            </div>
+        <div class="col-sm-4">
+            
+            <form class="form" name="myForm">
+                <h3>Add Item :</h3>
+
+                <input ng-model="product1.name" name="name" type="text" class="form-control" placeholder="Product Name" required>
+                <span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+                    <span ng-show="myForm.name.$error.required">Name is required.</span>
+                </span>
+
+                <input ng-model="product1.sku" name="sku" type="text" class="form-control" placeholder="SKU" required>
+                <span style="color:red" ng-show="myForm.sku.$dirty && myForm.sku.$invalid">
+                    <span ng-show="myForm.sku.$error.required">SKU is required.</span>
+                </span>
+
+                <textarea ng-model="product1.description" name="description" id="description" rows="4" class="form-control" placeholder="Description"
+                    required></textarea>
+                <span style="color:red" ng-show="myForm.description.$dirty && myForm.description.$invalid">
+                    <span ng-show="myForm.description.$error.required">Description is required.</span>
+                </span>
+
+                <input ng-model="product1.price" name="price" type="number" id="price" class="form-control" placeholder="Price" required>
+                <span style="color:red" ng-show="myForm.price.$dirty && myForm.price.$invalid">
+                    <span ng-show="myForm.price.$error.required">Price is required.</span>
+                </span>
+                <br/>
+                <button ng-disabled="myForm.name.$dirty && myForm.name.$invalid ||
+                                        myForm.sku.$dirty && myForm.sku.$invalid ||
+                                        myForm.description.$dirty && myForm.description.$invalid ||
+                                        myForm.price.$dirty && myForm.price.$invalid
+                                        " ng-click="submitForm()" id="add" class="btn btn-success no-margin-left">Add <i class="glyphicon glyphicon-plus"></i></button>
+            </form>
+        </div>
+    </div>
+
+</section>

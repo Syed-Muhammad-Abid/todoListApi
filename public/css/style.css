@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700');
+/*@font-face{
+    font-family: 'Open Sans';
+    src: url("fonts/OpenSans-Regular.ttf")
+}*/
+body{
+    
+    font-family: 'Open Sans',sans-serif;
+}
+body .form-control{
+    margin-top: 15px;
+}
+body .btn{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+#description{
+    resize: none;
+}
+#add{
+    margin-left: 0px;
+}
+table .btn{
+    margin-left: 0px;
+    margin-top: 0px;
+}
