@@ -1,4 +1,4 @@
 node_modules
-app/routes
-.gitignore
-npm-debug.log
+routes
+*.gitignore
+*.log
